@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCHBsBMcLHTVHHj5WSgZponpNfBaA7GZHs",
-  authDomain: "gastos-casa-ea757.firebaseapp.com",
-  projectId: "gastos-casa-ea757",
-  storageBucket: "gastos-casa-ea757.appspot.com",
-  messagingSenderId: "605311454814",
-  appId: "1:605311454814:web:a45f7d762941a583256ecf"
+  apiKey: process.env.NEXT_PUBLIC_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_APPID
 };
 
 // Initialize Firebase
