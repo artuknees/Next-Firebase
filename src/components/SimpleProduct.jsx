@@ -10,7 +10,7 @@ const SimpleProduct = ({product}) => {
     const deleteProductAPI = async () => {
         try {
             const { product } = query;
-            const res = (await axios.delete(`http://localhost:3000/api/delete/${product}`)).data;
+            const res = (await axios.delete(`../../api/delete/${product}`)).data;
             router.push('/')
         } catch(err) {
             console.error(err)
@@ -23,7 +23,7 @@ const SimpleProduct = ({product}) => {
                 const body = {
                     name: newName
                 }
-                const res = (await axios.patch(`http://localhost:3000/api/patch/${product}`,body)).data;
+                const res = (await axios.patch(`../../api/patch/${product}`,body)).data;
                 router.push('/')
             } catch(err) {
                 console.error(err)

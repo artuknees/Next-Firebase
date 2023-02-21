@@ -14,7 +14,7 @@ const Form = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const rta = await axios.get('http://localhost:3000/api/getProducts');
+                const rta = await axios.get('../api/getProducts');
                 setProducts(rta.data);  
             } catch (err) {
                 console.error(err)
@@ -26,7 +26,7 @@ const Form = () => {
         e.preventDefault();
         try {
             const body = thing;
-            const rta = await axios.post('http://localhost:3000/api/createProduct', body);
+            const rta = await axios.post('../api/createProduct', body);
             setFetcher(!fetcher)
         } catch(err) {
             console.error(err)
