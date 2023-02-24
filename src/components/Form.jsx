@@ -1,6 +1,9 @@
 import React , {useState, useEffect} from "react";
 import axios from 'axios';
 import { useRouter } from "next/router";
+import '@fontsource/roboto/400.css';
+import Button from '@mui/material/Button';
+import { Autocomplete, TextField } from "@mui/material";
 
 const Form = () => {
     const router = useRouter();
@@ -66,6 +69,21 @@ const Form = () => {
                         <p>{`Amount: ${item.cantidad}`}</p>
                     </div>
                 )})}
+                <div className="mb-10">
+                <Button variant="outlined">Outlined</Button>
+                </div>
+                <div>
+                    <Autocomplete
+                        disablePortal
+                        id="combo-box-demo"
+                        options={[
+                            { label: 'The Godfather', id: 1 },
+                            { label: 'Pulp Fiction', id: 2 },
+                        ]}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Movie" />}
+                    />    
+                </div>        
             </div>
         </div>
     )
